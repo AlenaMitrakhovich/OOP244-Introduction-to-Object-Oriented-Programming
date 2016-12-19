@@ -43,36 +43,12 @@ namespace sict {
   }
 
   void AccountNumber::display(bool display_name, bool display_number) {
-
-    if (display_name == true && display_number == true) {
+    
       if (true == isValid()) {
         cout << "Name: " << _name << ", Account number: " << _bankCode << "-" << _branchCode << "-" << _accountNumber << endl;
       }
       else {
         cout << _name << " does not have a valid account number." << endl;
       }
-    }
-
-    if (display_name == false && display_number == true) {
-      displayNumber();
-    }
-
-    if (display_name == true && display_number == false) {
-      displayName();
-    }
-
-    if (display_name == false && display_number == false) {
-      ;
-    }
-
   }
-
-  void AccountNumber::displayName() const {
-      cout << "Name: " << _name;
-  }
-
-  void AccountNumber::displayNumber() const {
-      cout << "Account number: " << _bankCode << "-" << _branchCode << "-" << _accountNumber;
-  }
-
 }

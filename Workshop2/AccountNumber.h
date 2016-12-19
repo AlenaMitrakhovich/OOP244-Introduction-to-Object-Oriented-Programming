@@ -40,9 +40,6 @@ namespace sict {
       void accountNumber(int bankCode, int branchCode, int accountNumber);
       void display(bool display_name = true, bool display_number = true);
       bool isValid() const;
-    private:
-      void displayName() const;
-      void displayNumber() const;
   };
 
 }
